@@ -25,12 +25,14 @@
             
             ticketPrice = ticketPrice - (ticketPrice / 100) * 40;
 
-        } else {
+        } else {// ELSE no discount
             
             ticketPrice = ticketPrice;
         }
 
         console.log(ticketPrice);
-        // ELSE no discount
+        
 
 // Output prezzo finale con massimo due decimali (.toFixed())
+
+        document.getElementById("output_id").innerHTML = ticketPrice.toFixed(2);
