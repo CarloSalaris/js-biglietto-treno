@@ -15,7 +15,7 @@ let userKm, userAge, ticketPrice;
     // il prezzo del biglietto è definito in base ai km (0.21 € al km)
     ticketPrice = userKm * 0.21;
 
-    console.log(ticketPrice);
+    console.log("prezzo biglietto senza sconto", ticketPrice);
 
     // Sconto (?):
         
@@ -32,7 +32,7 @@ let userKm, userAge, ticketPrice;
             ticketPrice = ticketPrice;
         }
 
-        console.log(ticketPrice);
+        console.log("prezzo biglietto finale", ticketPrice);
         
 
 // Output prezzo finale con massimo due decimali (.toFixed())
