@@ -37,4 +37,4 @@ let userKm, userAge, ticketPrice;
 
 // Output prezzo finale con massimo due decimali (.toFixed())
 
-        document.getElementById("output_id").innerHTML = ticketPrice.toFixed(2);
+        document.getElementById("output_id").innerHTML = `L'importo totale del biglietto sarà di ${ticketPrice.toFixed(2)} euro`;
