@@ -1,17 +1,19 @@
+// Global variables
+let userKm, userAge, ticketPrice;
 
 
 // chiedere all’utente (prompt();) :
 
     // il numero di chilometri che vuole percorrere [userKm] (parseInt();)
-    let userKm = parseInt(prompt("Quanti chilometri devi percorrere?"));
+    userKm = parseInt(prompt("Quanti chilometri devi percorrere?"));
 
     // l’età del passeggero [userAge] (parseInt();)
-    let userAge = parseInt(prompt("Quanti anni hai?"));
+    userAge = parseInt(prompt("Quanti anni hai?"));
 
 // calcolare il prezzo totale del viaggio, secondo queste regole:
 
     // il prezzo del biglietto è definito in base ai km (0.21 € al km)
-    let ticketPrice = userKm * 0.21;
+    ticketPrice = userKm * 0.21;
 
     console.log(ticketPrice);
 
