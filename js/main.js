@@ -14,21 +14,21 @@
 
     // Sconto (?):
 
-    let discount = (ticketPrice / 100);
+    let discountPerc = 0;
         
         if (userAge < 18) { // IF userAge < 18 {sconto del 20%}
 
-            discount = discount * 20;
+            discountPerc = 20;
 
         }else if (userAge >= 65) { // ELSE IF userAge >= 65 {sconto del 40%}
             
-            discount = discount * 40;
+            discountPerc = 40;
 
         }
-        else {
-            discount = 0;
-        }        
 
+    let discount = (ticketPrice / 100) * discountPerc;
+
+    
 // Output prezzo finale con massimo due decimali (.toFixed())
 
-        document.getElementById("output_id").innerHTML = `L'importo totale del biglietto sarà di ${(ticketPrice - discount).toFixed(2)} euro`;
+    document.getElementById("output_id").innerHTML = `L'importo totale del biglietto sarà di ${(ticketPrice - discount).toFixed(2)} euro`;
