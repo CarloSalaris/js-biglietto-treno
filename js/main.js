@@ -1,3 +1,6 @@
+// Global variables
+const kmPrice = 0.21;
+let discount = 1; //no discount
 
 // chiedere all’utente (prompt();) :
 
@@ -10,25 +13,19 @@
 // calcolare il prezzo totale del viaggio, secondo queste regole:
 
     // il prezzo del biglietto è definito in base ai km (0.21 € al km)
-    const ticketPrice = userKm * 0.21;
+    const ticketPrice = userKm * kmPrice;
 
     // Sconto (?):
 
-    let discountPerc = 0;
-        
         if (userAge < 18) { // IF userAge < 18 {sconto del 20%}
 
-            discountPerc = 20;
+            discount = 0.2; //20%
 
         }else if (userAge >= 65) { // ELSE IF userAge >= 65 {sconto del 40%}
             
-            discountPerc = 40;
-
+            discount = 0.4; //40%
         }
-
-    let discount = (ticketPrice / 100) * discountPerc;
-
-    
+   
 // Output prezzo finale con massimo due decimali (.toFixed())
 
-    document.getElementById("output_id").innerHTML = `L'importo totale del biglietto sarà di ${(ticketPrice - discount).toFixed(2)} euro`;
+    document.getElementById("output_id").innerHTML = `L'importo totale del biglietto sarà di ${(ticketPrice * discount).toFixed(2)} euro`;
